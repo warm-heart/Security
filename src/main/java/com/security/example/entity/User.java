@@ -47,9 +47,6 @@ public class User implements UserDetails {
         return true;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -68,7 +65,9 @@ public class User implements UserDetails {
         this.id = id;
     }
 
-
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getUsername() {
         return username;
@@ -97,10 +96,6 @@ public class User implements UserDetails {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
-
-
-
-
 
     public Role getRole() {
         return role;
